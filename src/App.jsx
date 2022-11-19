@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import PostContainer from './components/PostContainer'
 import Search from './components/Search'
@@ -11,6 +12,7 @@ const App = () => {
        <Search />
        <TitleHeader />
        <PostContainer />
+       <Footer />
     </>
   )
 }

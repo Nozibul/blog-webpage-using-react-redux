@@ -8,8 +8,8 @@ const TitleHeader = () => {
          ALL BLOGS ARE HERE
        </h2>
        <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa libero
-         labore natus atque, ducimus sed.
+       Nature blogs are among the fastest-growing 
+       category of blogs out there today
        </p>
     </div>
     </>

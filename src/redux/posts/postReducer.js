@@ -13,7 +13,7 @@ const postReducer = (state = initialState, action) =>{
              return {
                 ...state,
                 searchTxt: action.payload
-             }
+             };
 
             case FILTERED:
                 const { name, value } = action.payload ;
@@ -21,7 +21,7 @@ const postReducer = (state = initialState, action) =>{
                 let newPosts = [...state.allPost]
                 let filterBy = {};
                 filterBy[name] = value;
-                
+
                 if(name === 'author'){
                    newPosts = newPosts?.filter((post)=> post.author.id === value.id)
                     filterBy[name] = value.name; // john nozibul
@@ -36,8 +36,8 @@ const postReducer = (state = initialState, action) =>{
              return{
                  ...state,
                  filterBy,
-                 allPost: newPosts,
-             }
+                 filterPost: newPosts,
+             };
 
             case CLEARSEARCHTEXTFILTERED:
              return{
@@ -50,9 +50,8 @@ const postReducer = (state = initialState, action) =>{
                 ...state,
                 filterBy: {},
                 searchTxt: "",
-                // allPost: state.posts,
-             }
-        
+                filterPost: state.allPost,
+             };       
             default:
                return state;
         }

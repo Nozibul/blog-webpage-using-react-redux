@@ -2,22 +2,22 @@
     {
         id:1,
         name: "Nozibul",
-        avatar: "./images/users/nj.jpg"
+        avatar: "./public/images/users/Optimized-about.jpg"
     },
     {
         id:2,
         name: "John",
-        avatar: "./images/users/john.png"
+        avatar: "./public/images/users/main3.png"
     },
     {
         id:3,
         name: "Kakaku",
-        avatar: "./images/users/kkk.jpg"
+        avatar: "./public/images/users/people-1.png"
     },
     {
         id:4,
         name: "Smith",
-        avatar: "./images/users/smith.jpg"
+        avatar: "./public/images/users/testimonials1.jpg"
     },
  
  ]
@@ -25,7 +25,7 @@
 export const posts = [
     {
         id:1,
-        image:"./images/posts/b1 (2).png",
+        image:"./public/images/posts/about3.jpg",
         category: 'Education',
         title: "Get Higher Education From Your Dream",
         date: "8 May, 2019",
@@ -33,7 +33,7 @@ export const posts = [
     },
     {
         id:2,
-        image:"./images/posts/b2.png",
+        image:"./public/images/posts/b1 (2).png",
         category: 'Nature',
         title: "Fantastic Nature of the World",
         date: "10 June, 2021",
@@ -41,7 +41,7 @@ export const posts = [
     },
     {
         id:3,
-        image:"./images/posts/b3.jpg",
+        image:"./public/images/posts/b1.png",
         category: 'Real Nature',
         title: "Searching My Dreams",
         date: "28 May, 2017",
@@ -49,7 +49,7 @@ export const posts = [
     },
     {
         id:4,
-        image:"./images/posts/b5.jpg",
+        image:"./public/images/posts/b3.jpg",
         category: 'Business',
         title: "Best Business Policy in your Dream",
         date: "23 Aug, 2022",
@@ -57,7 +57,7 @@ export const posts = [
     },
     {
         id:5,
-        image:"./images/posts/b1.png",
+        image:"./public/images/posts/b2.png",
         category: 'Education',
         title: "Expanding accessible learning with Google for Education",
         date: "15 June, 2020",
@@ -65,7 +65,7 @@ export const posts = [
     },
     {
         id:6,
-        image:"./images/posts/b6.jpg",
+        image:"./public/images/posts/b6.jpg",
         category: 'Article',
         title: "article typically conveys facts and an unbiased opinion on a particular topic",
         date: "04 Jan, 2017",

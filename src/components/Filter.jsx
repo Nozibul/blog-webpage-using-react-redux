@@ -2,7 +2,6 @@ import { useDispatch } from "react-redux";
 import { clearFiltered } from "../redux/posts/action";
 
 const Filter = ({ name, value }) => {
-  console.log(name, value);
     const dispatch = useDispatch();
     return (
       <div className="flex items-center justify-between my-8">
