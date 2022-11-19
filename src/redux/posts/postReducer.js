@@ -3,54 +3,53 @@ import { posts } from "../../../data"
 const initialState = {
         allPost: posts,
         filterPost: posts,
-        search: "", // eduction etc title 
+        searchTxt: "",  
         filterBy: {}
 };
 
-const reducer = (state = initialState, action) =>{
+const postReducer = (state = initialState, action) =>{
         switch (action.type) {
             case SEARCHTEXTFILTERED:
-             return{
+             return {
                 ...state,
-                search: action.payload
+                searchTxt: action.payload
              }
 
             case FILTERED:
-                // action.payload er vitore filterd pabo payload hisebe
-                // then ter moddhe value, name ai name e duita property thakbe
-                const { name, value} = action.payload ;
+                const { name, value } = action.payload ;
+            
                 let newPosts = [...state.allPost]
                 let filterBy = {};
+                filterBy[name] = value;
+                
                 if(name === 'author'){
-                   newPosts = newPosts.filter((post)=> {
-                     post.author.id === value.id
-                   })
-                   filterBy[name] = value; 
+                   newPosts = newPosts?.filter((post)=> post.author.id === value.id)
+                    filterBy[name] = value.name; // john nozibul
                 } else if (name === 'search'){
-                 newPosts = newPosts.filter((post)=>{
-                    post.title.toLowerCase.includes(value.toLowerCase())
-                 })
+                 newPosts = newPosts?.filter((post)=>
+                    post?.title?.toLowerCase().includes(value.toLowerCase())
+                 )
                 } else{
-                    newPosts = newPosts.filter((post)=> post[name] === value); // post er vitore name property nia ter moddhe value ta k add kore dilam
+                    newPosts = newPosts?.filter((post)=> post.category === value); 
                 }
 
              return{
                  ...state,
+                 filterBy,
                  allPost: newPosts,
-                 filterBy
              }
 
             case CLEARSEARCHTEXTFILTERED:
              return{
                 ...state,
-                search: ""
+                searchTxt: ""
              }
 
             case CLEARFILTERED:
              return{
                 ...state,
                 filterBy: {},
-                search: "",
+                searchTxt: "",
                 // allPost: state.posts,
              }
         
@@ -59,3 +58,5 @@ const reducer = (state = initialState, action) =>{
         }
     
 }
+
+export default postReducer ;

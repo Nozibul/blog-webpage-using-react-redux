@@ -29,7 +29,7 @@ export const posts = [
         category: 'Education',
         title: "Get Higher Education From Your Dream",
         date: "8 May, 2019",
-        author: author[1],
+        author: author[0],
     },
     {
         id:2,
